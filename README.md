@@ -1,5 +1,8 @@
 # vue-booking-ui
 
+![main](https://user-images.githubusercontent.com/57963926/132343585-7ed96178-3bd6-4002-8383-25942554cdcf.jpg)
+
+
 ## Project setup
 ```
 yarn install
