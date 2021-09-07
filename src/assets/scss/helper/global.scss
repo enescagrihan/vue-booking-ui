@@ -1,0 +1,165 @@
+@import "@/assets/scss/config/variables.scss";
+@import "@/assets/scss/config/mixin.scss";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-seriff;
+    font-size: 16px;
+}
+
+.container {
+    max-width: $max-width;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.custom-input, .custom-select {
+    padding-right: 10px;
+    padding-left: 44px;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+}
+
+.button {
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 44px;
+    color: white;
+    border-radius: 3px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: $color-button-blue;
+
+    &-navy {
+        background-color: $color-navy;
+    }
+
+    &-full {
+        width: 100%;
+    }
+
+    &-icon {
+        color: black;
+        background-color: transparent;
+    }
+
+    &-big {
+        border-radius: 0;
+        box-shadow: 0px 15px 20px rgba($color: $color-button-blue, $alpha: .3);
+    }
+}
+
+.form-element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    .material-icons {
+        position: absolute;
+        color: $color-navy;
+        left: 10px;
+        pointer-events: none;
+    }
+
+    .expand-icon {
+        left: auto;
+        right: 10px;
+    }
+
+    .custom-input {
+        min-height: 44px
+    }
+
+    .custom-select {
+        height: 44px;
+        appearance: none;
+    }
+}
+
+.form-description {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 16px;
+
+    @include bPoint("for-search") {
+        margin-top: 20px;
+    }
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    
+    @include bPoint("for-search") {
+        position: absolute;
+        margin-bottom: 0;
+        top: 64px;
+        right: 0;
+    }
+
+    .custom-checkbox {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        &:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            border: 2px solid white;
+            border-radius: 2px;
+        }
+
+        .material-icons {
+            position: absolute;
+            display: none;
+            font-size: 18px;
+        }
+
+        input:checked + .material-icons {
+            display: block;
+        }
+    }
+}
+
+.section-title {
+    color: $color-dark-blue;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 70px;
+
+        // @include bPoint("for-search") {
+        //     margin-bottom: 70px;
+        // }
+}
+
+.light-blue-text {
+    color: $color-button-blue;
+}
+
+.header-dark-blue {
+    color: $color-dark-blue;
+}
+
+.link-blue {
+    color: $color-button-blue;
+    text-decoration: underline;
+}
+
+.icon-location {
+    color: $color-icon-gray;
+    font-size: 20px;
+    position: relative;
+    left: -2px;
+}
